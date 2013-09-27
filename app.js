@@ -1,12 +1,14 @@
-var request = require('request'),
-sendgrid = require('sendgrid')(process.env.SENDGRID_USER, process.env.SENDGRID_PASS);
+var request = require('request');
+
+// TODO(you): set the appropriate environment variables
+var sendgrid = require('sendgrid')(process.env.SENDGRID_USER, process.env.SENDGRID_PASS);
 
 // time range for this day 1 year ago
 var today = new Date(),
 afterTimestamp = (new Date(today.getFullYear()-1, today.getMonth(), today.getDate()).getTime()) / 1000;
 beforeTimestamp = afterTimestamp + (60*60*24);
 
-// fill this in with the user's foursquare oauth token.
+// TODO(you): fill this in with the user's foursquare oauth token.
 // for more details, see https://developer.foursquare.com/overview/auth
 var oauth_token = '';
 
@@ -24,7 +26,8 @@ request(url, function(err, response, body) {
     emailBody += '<li>' + venues[i].venue.name + '</li>';
   }
 
-  // send email with sendgrid. fill in appropriate to/from values
+  // send email with sendgrid. 
+  // TODO(you): fill in appropriate to/from values
   sendgrid.send({
     to: '',
     from: '',

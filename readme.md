@@ -5,7 +5,7 @@ of [Timehop](http://timehop.com/) with very little code using the
 [Foursquare](https://developer.foursquare.com/) and [SendGrid](http://sendgrid.com/developer)
 APIs. 
 
-Detailed explanation of how this works in the comments of app.js, but steps required to get this to run:
+Detailed explanation of how this works can be found in the comments of app.js, but steps required to get this to run:
 
 1. [Create an app](https://foursquare.com/developers/apps) on Foursquare
 2. [Get a Foursquare OAuth token](https://developer.foursquare.com/overview/auth). Fill in `oauth_token`
